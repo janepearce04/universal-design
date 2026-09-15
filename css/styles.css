@@ -1,0 +1,276 @@
+/* css Zen Garden submission 179 - 'Vin Rouge', by Thorsten Bopp, http://www.bopp-medien.de/ */
+/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+/* All associated graphics copyright 2005, Thorsten Bopp */
+/* Added: September 1st, 2005 */
+
+/* colors
+wine red:    #9E2E2F
+dark brown:  #541D1D
+light yellow:#F7F5D9
+link:        #EA907F
+*/
+
+
+body {
+	background-image: radial-gradient(#290707 10%, #9E2E2F 80%, #e4a4b2 10%);
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+	color: #F7F5D9;
+	font-size: 0.75em;
+	line-height: 1.6em;
+	padding: 0;
+	margin: 0;
+	text-align: center;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+	}
+
+
+/*  fonts ------------------------------------------------------------------------- */
+
+a:link {color: #EA907F;text-decoration: none;} 
+a:visited {color: #EA907F;text-decoration: none;} 
+a:hover {color: #F7F5D9;text-decoration: underline;}
+
+p, h1, h2, h3 {margin: 0; padding: 0.4em;}
+
+abbr, abbr {
+	text-decoration: none;
+	border-bottom: 1px dotted #F7F5D9;
+	cursor: help;
+	}
+
+
+/*  container ------------------------------------------------------------------- */
+
+.page-wrapper {
+	background: #000000 url(background_header.gif) top center no-repeat;
+	width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	margin-bottom: -50px;
+	padding: 0;
+	text-align: left;
+	}
+
+
+/*  intro ------------------------------------------------------------------- */
+
+.intro {
+	width: 580px;
+	margin: 0;
+	padding: 0;
+	}
+
+header {
+	display: block;
+    font-size: 1.5rem;
+    padding: 0.2rem;
+    margin: 10px;
+    line-height: 1em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	}
+
+div.main-container {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    width: 100vw;
+    height: fit-content;
+}
+
+img {
+    width: 22vw;
+    margin: 5vw;
+    border-radius: 50px;
+    border: solid;
+    border-color: #290707;
+}
+
+div.summary {
+    font-size: 1rem;
+    word-break: keep-all;
+    word-spacing: 0.2rem;
+    letter-spacing: 0.1em;
+    color: #ffa6c4;
+	width: 80vw;
+	height: auto;
+	padding: 1vw;
+	margin: 3em;
+    background-color: #541D1D;
+    border-radius: 50px;
+    border-color: #ffa6c4;
+    border: solid;
+	}
+
+div.summary p:first-child {
+	display: none;
+	}
+
+
+/*  preamble ------------------------------------------------------------------- */
+
+div.preamble {
+	background: url(content_boxes_middle_preamble.gif) repeat-y;
+	width: 375px;
+	margin-left: 205px;
+	}
+
+div.preamble h3 {
+	background: url(headline_preamble.gif) top left no-repeat;
+	height: 85px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+div.preamble p {
+	padding: 0 10px 10px 20px;
+	}
+
+div.preamble p:nth-child(2) {
+	margin-top: -25px;
+	}
+
+div.preamble p:nth-child(4) {
+	background: url(content_boxes_bottom_preamble.gif) bottom left no-repeat;
+	padding-bottom: 65px;
+	/* for IE5 */
+	margin-bottom: 0px;
+	}
+
+
+/*  supportingText ------------------------------------------------------------------- */
+
+.supporting {
+	width: 580px;
+	margin: 0 0 50px 0;
+	padding: 0;
+	}
+
+div.explanation, div.participation, div.benefits, div.requirements {
+	background: url(content_boxes_middle.gif) repeat-y;
+	width: 550px;
+	margin-left: 30px;
+	}
+
+div.explanation p, div.participation p, div.benefits p, div.requirements p {
+	padding: 0 10px 10px 20px;
+	}
+
+div.explanation p:nth-child(2), div.participation p:nth-child(2), div.benefits p:nth-child(2), div.requirements p:nth-child(2) {
+	margin-top: -25px;
+	}
+
+div.explanation p:nth-child(3), div.participation p:nth-child(4), div.benefits p:nth-child(2), div.requirements p:nth-child(6) {
+	background: url(content_boxes_bottom.gif) bottom left no-repeat;
+	padding-bottom: 65px;
+	/* for IE5 */
+	margin-bottom: 0px;
+	}
+
+div.explanation h3, div.participation h3, div.benefits h3, div.requirements h3 {
+	height: 85px;
+
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+/*  footer ------------------------------------------------------------------- */
+
+footer {
+	width: 80vw;
+	height: 2vh;
+	margin-left: 155px;
+	text-align: center;
+	font-size: 2em;
+    word-spacing: 0.5rem;
+	padding-top: 20px;
+    padding-bottom: 40px;
+	}
+footer a:link {color: #c69a9a;}
+footer a:visited {color: #9f6e6f;}
+footer a:hover {color: #F7F5D9;}
+
+footer.ul {
+    display: flex;
+}
+
+
+/*  linkList ------------------------------------------------------------------- */
+
+.sidebar {
+	position: absolute; left:auto; right:auto; top:290px;
+	width: 155px;
+	margin-left: 300px;
+	padding: 0;
+	font-size: 0.9em;
+	line-height: 1.6em;
+	color: #9E2E2F;
+	}
+
+ul {
+	list-style: none;
+	background: url(marginal_boxes_bottom.gif) bottom left no-repeat;
+	margin: 5px 0 0 0;
+	padding: 0 0 45px 0;
+    text-align: left;
+	}
+
+li {
+	margin-left: 0;
+    margin-bottom: 0.2rem;
+	padding: 10px 5px 5px 10px;
+	}
+
+div.design-selection li {
+	background: url(li_element.gif) bottom center no-repeat;
+	padding: 0 10px 25px 15px;
+	}
+
+div.design-selection a {
+	display: block;
+	font-weight: bold;
+	}
+
+div.design-selection a.designer-name {
+	display: inline;
+	font-weight: normal;
+	}
+
+div.design-selection, div.design-archives, div.zen-resources {
+	background: url(marginal_boxes_middle.gif) repeat-y;
+	width: 155px;
+	}
+
+div.design-selection h3 {
+	background: url(headline_select.gif) top left no-repeat;
+	}
+
+div.design-archives h3 {
+	background: url(headline_archives.gif) top left no-repeat;
+	}
+
+div.zen-resources h3 {
+	background: url(headline_resources.gif) top left no-repeat;
+	}
+
+div.design-selection h3, div.design-archives h3, div.zen-resources h3 {
+	height: 35px;
+	}
+
+div.zen-resources h3, div.design-selection h3, div.design-archives h3 {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	}
+
+
+/*  extraDivs ------------------------------------------------------------------- */
+
+div.extra1, div.extra2, div.extra3, div.extra4, div.extra5, div.extra6 {
+	display: none;
+	}
