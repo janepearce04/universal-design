@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn how to detect, prevent, and defend against data poisoning attacks compromising AI models, ensuring accuracy, security, and trust.">
+    <title>Data Poisoning: How to Detect, Prevent, and Respond</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&amp;family=Lato:wght@400;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons&amp;display=block" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/styles-2.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <div class="page-wrapper">
+
+        <!-- SITE HEADER -->
+        <header class="site-header">
+            <a class="logo" href="https://nexttechtoday.com/">
+                <img class="logo-img" src="https://nexttechtoday.com/wp-content/uploads/2023/11/NTT-Logo-380x65-White.png" alt="NextTech Today home" width="380" height="65">
+            </a>
+
+            <form class="search-form" role="search" method="get">
+                <fieldset>
+                    <legend>Search</legend>
+                    <label class="visually-hidden" for="site-search">Search the site</label>
+                    <input type="search" id="site-search" name="s" placeholder="type here..." autocomplete="off">
+                    <button type="submit">
+                        <span class="material-icons icon" aria-hidden="true">search</span>
+                        <span>Search</span>
+                    </button>
+                </fieldset>
+            </form>
+        </header>
+
+        <div class="content-grid">
+
+            <!-- MAIN CONTENT -->
+            <main id="main" tabindex="-1">
+                <article>
+
+                    <header class="article-header">
+                        <ul class="categories" aria-label="Categories">
+                            <li><a href="https://nexttechtoday.com/tech/cyber-security/">Cyber Security</a></li>
+                            <li><a href="https://nexttechtoday.com/tech/ai/">Artificial Intelligence</a></li>
+                        </ul>
+
+                        <h1>Data Poisoning: How to Detect, Prevent, and Respond</h1>
+
+                        <p class="byline">
+                            <span class="material-icons icon" aria-hidden="true">person</span>
+                            By <a href="https://nexttechtoday.com/author/staff-writer/" rel="author">NextTech Today Editors</a>
+                        </p>
+                        <p class="byline">
+                            <span class="material-icons icon" aria-hidden="true">schedule</span>
+                            <time datetime="2025-09-11T07:37:19-04:00">September 11, 2025 7:37 am</time>
+                        </p>
+
+                        <div class="share">
+                            <p class="share-label">
+                                <span class="material-icons icon" aria-hidden="true">share</span>
+                                Share
+                            </p>
+                            <ul aria-label="Share this article">
+                                <li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F">Facebook</a></li>
+                                <li><a href="https://twitter.com/intent/tweet?text=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond&amp;url=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F&amp;via=NextTech%20Today">Twitter</a></li>
+                                <li><a href="https://api.whatsapp.com/send?text=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond%20%0A%0A%20https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F">WhatsApp</a></li>
+                                <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F&amp;title=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond">Linkedin</a></li>
+                                <li>
+                                    <a href="mailto:?subject=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond&amp;body=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F">
+                                        <span class="material-icons icon" aria-hidden="true">email</span>
+                                        Email
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </header>
+
+                    <figure class="feature-image">
+                        <img src="https://nexttechtoday.com/wp-content/uploads/2025/09/Data-Poisoning-Explained-Types-Symptoms-and-Mitigation.jpg" alt="Data Poisoning: How to Detect, Prevent, and Respond" width="1068" height="712">
+                    </figure>
+
+                    <nav class="toc" aria-labelledby="toc-title">
+                        <h2 id="toc-title">Contents</h2>
+                        <ul>
+                            <li>
+                                <a href="#intro">Data Poisoning Basics</a>
+                                <ul>
+                                    <li><a href="#what-is">What Is Data Poisoning?</a></li>
+                                    <li><a href="#how-it-works">How Data Poisoning Works</a></li>
+                                    <li><a href="#poisoning-or-prompting">Data Poisoning vs. Prompt Injection</a></li>
+                                    <li><a href="#warning-signs">10 Warning Signs of Data Poisoning</a></li>
+                                    <li><a href="#attack-types">Types of Data Poisoning Attacks</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#prevent-data-poisoning">Prevent Data Poisoning</a>
+                                <ul>
+                                    <li><a href="#step-1">1. Validate and Verify Data</a></li>
+                                    <li><a href="#step-2">2. Rethink Your Data Pipeline</a></li>
+                                    <li><a href="#step-3">3. Build Robust Models</a></li>
+                                    <li><a href="#step-4">4. Continuous Monitoring</a></li>
+                                    <li><a href="#step-5">5. Isolate and Remove Corrupted Data</a></li>
+                                    <li><a href="#step-6">6. Strengthen Security Awareness</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#bigger-picture">The Bigger Picture</a></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Intro -->
+                    <section id="intro">
+                        <h2 class="summary">Learn how to detect, prevent, and defend against data poisoning attacks compromising AI models, ensuring accuracy, security, and trust.</h2>
+                        <p>Artificial intelligence (AI) powers everything from fraud detection to self-driving cars. But what happens when the very data that trains these models is corrupted? This is the danger posed by data poisoning, a stealthy cyberattack that compromises AI systems before they go live.</p>
+                        <p>Data poisoning — model poisoning — happens when attackers tamper with an AI model’s training data. By subtly altering, adding, or deleting data points, they can make a model learn harmful, inaccurate, or biased behavior. These attacks are particularly insidious because they’re hard to detect and can cause widespread damage, from misinformation amplification to catastrophic system failures.</p>
+                    </section>
+
+                    <!-- What is -->
+                    <section id="what-is">
+                        <h2>What Is Data Poisoning?</h2>
+                        <p>At its core, data poisoning manipulates the information that AI relies on to “learn.” This can occur during different stages of the AI lifecycle, such as pre-training, fine-tuning, or embedding creation. Attackers exploit weaknesses in the data pipeline to:</p>
+                        <ul>
+                            <li>Insert misleading or malicious samples</li>
+                            <li>Alter labels or content to distort outcomes</li>
+                            <li>Delete critical records, creating gaps in learning</li>
+                            <li>Subtly bias the model’s perspective</li>
+                        </ul>
+                        <p>Industries such as finance, healthcare, and autonomous systems are especially vulnerable. Even minor shifts in model behavior in these high-stakes environments can result in devastating consequences.</p>
+                    </section>
+
+                    <!-- How it works -->
+                    <section id="how-it-works">
+                        <h2>How Data Poisoning Works</h2>
+                        <p>Unlike attacks that target AI systems after deployment, data poisoning strikes before a model is launched. The attacker’s goal is to introduce corrupted data that appears normal during testing but misbehaves in the real world — either consistently or only when triggered.</p>
+                        <p>For example, in 2021, <a href="https://www.nytimes.com/2021/10/13/business/tesla-autopilot-recall-safety.html">Tesla</a> faced recalls and regulatory fines after flawed training data caused its self-driving system to misclassify obstacles. This illustrates how a small data flaw can escalate into a major safety and financial issue.</p>
+                        <p>There are two main outcomes of data poisoning:</p>
+                        <ol>
+                            <li><strong>Integrity Attacks</strong> – The model functions correctly until it encounters a hidden “trigger” designed by the attacker.</li>
+                            <li><strong>Availability Attacks</strong> – The model’s overall performance degrades, becoming unreliable and inconsistent.</li>
+                        </ol>
+                        <p>Corrupted data can enter through various sources:</p>
+                        <ul>
+                            <li>Open datasets</li>
+                            <li>Third-party data feeds</li>
+                            <li>User-generated feedback loops</li>
+                            <li>Embedding stores and external data repositories</li>
+                        </ul>
+                        <p><strong>Example:</strong><br>Imagine a news platform that re-trains its moderation model weekly. A coordinated disinformation campaign floods the system with false labels — marking propaganda as “trustworthy” and real journalism as “misleading.” After retraining, the model unknowingly amplifies fake news while suppressing legitimate stories. The code didn’t change; the data did.</p>
+                    </section>
+
+                    <!-- Poisoning vs prompt injection -->
+                    <section id="poisoning-or-prompting">
+                        <h2>Data Poisoning vs. Prompt Injection</h2>
+                        <p>It’s easy to confuse data poisoning with <strong>prompt injection</strong>, another AI vulnerability.</p>
+                        <ul>
+                            <li><strong>Data Poisoning</strong> – Alters the model’s <em>foundation</em> during training, permanently influencing its behavior.</li>
+                            <li><strong>Prompt Injection</strong> – Exploits the model <em>after deployment</em> by hiding malicious instructions in prompts or documents.</li>
+                        </ul>
+                    </section>
+
+                    <!-- Warning signs -->
+                    <section id="warning-signs">
+                        <h2>10 Warning Signs of Data Poisoning</h2>
+                        <p>Data poisoning rarely announces itself with a single, obvious failure. Instead, it emerges as subtle patterns. Watch for these red flags:</p>
+                        <ol class="padded">
+                            <li><strong>Segment-specific dips</strong> – Sudden performance drops in specific regions, devices, or products.</li>
+                            <li><strong>Confusion matrix drift</strong> – Previously distinct classes start misclassifying each other.</li>
+                            <li><strong>Calibration shifts</strong> – Confidence scores become unusually high or low.</li>
+                            <li><strong>Generalization gap</strong> – Metrics improve on new training data but decline on live traffic.</li>
+                            <li><strong>Bias spikes</strong> – Errors increase disproportionately for certain user groups.</li>
+                            <li><strong>Triggered failures</strong> – Specific symbols, tokens, or phrases consistently cause wrong outputs.</li>
+                            <li><strong>Distribution jolts</strong> – Sudden, unexplained changes in feature distributions.</li>
+                            <li><strong>Label volatility</strong> – Rapid waves of relabeling toward a single suspicious outcome.</li>
+                            <li><strong>Duplicate bursts</strong> – Many near-identical records appear in a short time frame.</li>
+                            <li><strong>Version disagreements</strong> – The latest model disagrees with previous versions in specific, consistent ways.</li>
+                        </ol>
+                    </section>
+
+                    <!-- Types of attacks (with data table) -->
+                    <section id="attack-types">
+                        <h2>Types of Data Poisoning Attacks</h2>
+
+                        <section id="targeted">
+                            <h3>1. Targeted Poisoning</h3>
+                            <p>Attackers introduce malicious samples that cause <strong>specific incorrect outcomes</strong>, often tied to a hidden trigger.</p>
+                            <ul>
+                                <li><em>Example:</em> A small yellow sticker on a stop sign tricks a vision model into misclassifying it as a speed limit sign. Everything appears normal unless the trigger is present.</li>
+                            </ul>
+                        </section>
+
+                        <section id="nontargeted">
+                            <h3>2. Nontargeted Poisoning</h3>
+                            <p>Instead of focusing on one outcome, the attacker broadly corrupts the data, degrading the model’s overall accuracy and reliability.</p>
+                            <ul>
+                                <li><em>Example:</em> An artist once pulled a cart loaded with <strong>99 active smartphones</strong>, fooling Google Maps into displaying a fake traffic jam.</li>
+                            </ul>
+                        </section>
+
+                        <div class="table-scroll" role="region" aria-labelledby="table-caption" tabindex="0">
+                            <table>
+                                <caption id="table-caption">Targeted Poisoning compared with Nontargeted Poisoning</caption>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Dimension</th>
+                                        <th scope="col">Targeted Poisoning</th>
+                                        <th scope="col">Nontargeted Poisoning</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Goal</th>
+                                        <td>Specific misclassification</td>
+                                        <td>Widespread performance degradation</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Typical Tactic</th>
+                                        <td>Backdoors with hidden triggers</td>
+                                        <td>Label flipping, noise injection, deletions</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Blast Radius</th>
+                                        <td>Narrow but precise</td>
+                                        <td>Broad and diffuse</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Detection Signal</th>
+                                        <td>“Works fine… until X appears”</td>
+                                        <td>Gradual drops in overall accuracy</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <!-- Prevention -->
+                    <section id="prevent-data-poisoning">
+                        <h2>7 Steps to Prevent Data Poisoning</h2>
+
+                        <section id="step-1">
+                            <h3>1. Validate and Verify Data</h3>
+                            <p>Implement a two-tier defense:</p>
+                            <ul>
+                                <li><strong>Automated validation</strong> – Detect incorrect formats, missing fields, duplicates, and outliers.</li>
+                                <li><strong>Human review</strong> – Catch subtle biases and suspicious patterns through blind double-labeling.</li>
+                            </ul>
+                            <p><strong>Tips:</strong></p>
+                            <ul>
+                                <li>Enforce strict schema and type checks.</li>
+                                <li>Run drift tests to identify sudden distribution changes.</li>
+                                <li>Maintain provenance logs for every data source.</li>
+                            </ul>
+                        </section>
+
+                        <section id="step-2">
+                            <h3>2. Rethink Your Data Pipeline</h3>
+                            <p>Consider shifting from <strong>ETL (Extract, Transform, Load)</strong> to <strong>ELT (Extract, Load, Transform)</strong>:</p>
+                            <ul>
+                                <li><strong><abbr title="Extract, Transform, Load">ETL</abbr></strong> – Data is transformed too early, making errors hard to trace later.</li>
+                                <li><strong><abbr title="Extract, Load, Transform">ELT</abbr></strong> – Raw data is stored first, then transformed securely and transparently before training.</li>
+                            </ul>
+                        </section>
+
+                        <section id="step-3">
+                            <h3>3. Build Robust Models</h3>
+                            <p>Make models resistant to manipulation:</p>
+                            <ul>
+                                <li>Use <strong>ensemble models</strong> to flag disagreements.</li>
+                                <li>Incorporate <strong>adversarial training</strong> to prepare models for poisoned inputs.</li>
+                                <li>Regularize with techniques like dropout and label smoothing to prevent overfitting on poisoned points.</li>
+                            </ul>
+                        </section>
+
+                        <section id="step-4">
+                            <h3>4. Continuous Monitoring</h3>
+                            <p>Treat your live model as a system under constant watch:</p>
+                            <ul>
+                                <li>Establish a <strong>baseline</strong> for normal performance.</li>
+                                <li>Set up <strong>alerts</strong> for unusual inputs or outputs.</li>
+                                <li>Use <strong>shadow models</strong> to detect discrepancies before changes reach production.</li>
+                            </ul>
+                        </section>
+
+                        <section id="step-5">
+                            <h3>5. Isolate and Remove Corrupted Data</h3>
+                            <p>When poisoning is detected:</p>
+                            <ol>
+                                <li>Identify suspicious samples and trace their entry point.</li>
+                                <li>Remove compromised records and rebuild the dataset.</li>
+                                <li>Compare before-and-after metrics to ensure stability.</li>
+                                <li>Keep immutable backups for fast rollbacks.</li>
+                            </ol>
+                        </section>
+
+                        <section id="step-6">
+                            <h3>6. Strengthen Security Awareness</h3>
+                            <p>People are your first line of defense:</p>
+                            <ul>
+                                <li>Train teams regularly on data poisoning red flags.</li>
+                                <li>Maintain clear escalation paths for reporting anomalies.</li>
+                                <li>Hold “tabletop exercises” to practice response procedures.</li>
+                            </ul>
+                        </section>
+                    </section>
+
+                    <!-- Bigger picture -->
+                    <section id="bigger-picture">
+                        <h2>The Bigger Picture</h2>
+                        <p>Data poisoning strikes at the very heart of AI: its training data. As <a href="https://nexttechtoday.com/tech/ai/demystifying-genai/">generative AI</a> becomes more embedded in business and society, the risk of poisoning grows exponentially.</p>
+                        <p>Unchecked, these attacks can:</p>
+                        <ul>
+                            <li>Amplify <strong>bias and misinformation</strong></li>
+                            <li>Compromise <strong>critical infrastructure</strong></li>
+                            <li>Lead to <strong>financial and reputational loss</strong></li>
+                        </ul>
+                        <p>The key to defending against data poisoning lies in <strong>proactive testing, strong data governance, and continuous vigilance</strong>. By treating data as a critical asset — just like code or infrastructure — organizations can prevent their AI from becoming a silent weapon in the wrong hands.</p>
+                    </section>
+
+                    <!-- Article footer: tags, share, prev/next -->
+                    <footer class="article-footer">
+                        <section class="tags" aria-labelledby="tags-title">
+                            <h2 id="tags-title">
+                                <span class="material-icons icon" aria-hidden="true">sell</span>
+                                Tags
+                            </h2>
+                            <ul>
+                                <li><a href="https://nexttechtoday.com/tag/artificial-intelligence-ai/">Artificial Intelligence (AI)</a></li>
+                                <li><a href="https://nexttechtoday.com/tag/cyber-security/">Cyber Security</a></li>
+                                <li><a href="https://nexttechtoday.com/tag/machine-learning-ml/">Machine Learning (ML)</a></li>
+                                <li><a href="https://nexttechtoday.com/tag/security-operations-center-soc/">Security Operations Center (SOC)</a></li>
+                            </ul>
+                        </section>
+
+                        <div class="share">
+                            <p class="share-label">
+                                <span class="material-icons icon" aria-hidden="true">share</span>
+                                Share
+                            </p>
+                            <ul aria-label="Share this article on social media">
+                                <li><a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F">Facebook</a></li>
+                                <li><a href="https://twitter.com/intent/tweet?text=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond&amp;url=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F&amp;via=NextTech%20Today">Twitter</a></li>
+                                <li><a href="https://api.whatsapp.com/send?text=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond%20%0A%0A%20https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F">WhatsApp</a></li>
+                                <li><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F&amp;title=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond">Linkedin</a></li>
+                                <li>
+                                    <a href="mailto:?subject=Data%20Poisoning%3A%20How%20to%20Detect%2C%20Prevent%2C%20and%20Respond&amp;body=https%3A%2F%2Fnexttechtoday.com%2Ftech%2Fcyber-security%2Fdata-poisoning-detect-prevent-and-respond%2F">
+                                        <span class="material-icons icon" aria-hidden="true">email</span>
+                                        Email
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <nav class="article-nav" aria-label="More articles">
+                            <ul>
+                                <li>
+                                    <span class="nav-label"><span class="material-icons icon" aria-hidden="true">arrow_back</span> Previous article</span>
+                                    <a href="https://nexttechtoday.com/news/google-cloud-secures-58b-in-revenue-deals/">Google Cloud Secures $58B in Future Revenue Deals</a>
+                                </li>
+                                <li>
+                                    <span class="nav-label">Next article <span class="material-icons icon" aria-hidden="true">arrow_forward</span></span>
+                                    <a href="https://nexttechtoday.com/news/google-cloud-waives-fees-to-boost-eu-multicloud-moves/">Google Cloud Waives Fees to Boost EU Multicloud Moves</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </footer>
+
+                </article>
+            </main>
+
+            <!-- SIDEBAR -->
+            <aside class="must-read" aria-labelledby="must-read-title">
+                <h2 id="must-read-title">Must read</h2>
+                <ul>
+                    <li>
+                        <a href="https://nexttechtoday.com/people/qa-with-daniel-churches-dxc-technology/">Who Acts After an Alert? Has Your Team Rehearsed a Breach?</a>
+                        <time datetime="2026-10-14">October 14, 2026</time>
+                    </li>
+                    <li>
+                        <a href="https://nexttechtoday.com/news/singapore-firms-struggle-to-hit-ai-goals-autodesk-finds/">Singapore Firms Struggle to Hit AI Goals, Autodesk Finds</a>
+                        <time datetime="2026-10-14">October 14, 2026</time>
+                    </li>
+                    <li>
+                        <a href="https://nexttechtoday.com/news/cloudflare-lets-websites-charge-ai-agents-per-request/">Cloudflare Lets Websites Charge AI Agents Per Request</a>
+                        <time datetime="2026-10-14">October 14, 2026</time>
+                    </li>
+                    <li>
+                        <a href="https://nexttechtoday.com/tech/cyber-security/your-oldest-legacy-system-is-how-you-grant-admin-rights/">Your Oldest Legacy System Is How You Grant Admin Rights</a>
+                        <time datetime="2026-10-07">October 7, 2026</time>
+                    </li>
+                </ul>
+            </aside>
+
+        </div>
+
+        <!-- SITE FOOTER -->
+        <footer class="site-footer">
+            <a class="logo" href="https://nexttechtoday.com/">
+                <img class="logo-img" src="https://nexttechtoday.com/wp-content/uploads/2023/11/NTT-Logo-380x65-White.png" alt="NextTech Today home" width="380" height="65">
+            </a>
+            <p>Follow us on <a href="https://www.linkedin.com/company/nexttech-today/">Linkedin</a></p>
+            <p><small>© Vibe Media Corporation. All rights reserved.</small></p>
+
+            <div class="footer-columns">
+                <nav aria-labelledby="quick-links-title">
+                    <h2 id="quick-links-title">Quick Links</h2>
+                    <ul>
+                        <li><a href="https://nexttechtoday.com/about-us/">About Us</a></li>
+                        <li><a href="https://nexttechtoday.com/author-guidelines/">Author Guidelines</a></li>
+                        <li><a href="https://nexttechtoday.com/contact-us/">Contact Us</a></li>
+                        <li><a href="https://nexttechtoday.com/privacy-policy/">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
