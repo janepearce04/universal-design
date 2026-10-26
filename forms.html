@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>give me your info bitch</title>
+    <link rel="stylesheet" href="css/legibility.css">
+</head>
+<body>
+    <header>
+        Accessible Forms
+    </header>
+    <main>
+        <section id="main-content">
+            <h2>GIVE ME YOUR INFORMATION, BITCH</h2>
+            <form id="deaf">
+                <fieldset>
+                    <legend>Personal Information, give it over</legend>
+
+                    <legend>What is your name?</legend>
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input" name="name-input" required><br>
+
+                    <legend>What is your email?</legend>
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" name="email-input" required><br>
+
+                    <legend>What is your website?</legend>
+                    <label for="website-input">Website:</label>
+                    <input type="url" id="website-input" name="website-input"><br>
+
+                    <legend>What is your phone number?</legend>
+                    <label for="phone-input">Phone:</label>
+                    <input type="tel" id="phone-input" name="phone-input" minlength="7" maxlength="8" required><br>
+
+                    <legend>What is your age?</legend>
+                    <label for="age-input">Age:</label>
+                    <input type="number" id="age-input" name="age-input" min="0"><br>
+
+                    <legend>Make a password</legend>
+                    <label for="password-input">Password:</label>
+                    <input type="password" id="password-input" name="password-input" maxlength="50" minlength="6" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,20}$" required><br>
+                    <ul class="inputRequirements">
+                        <li>must be at least 6 characters long, have uppercase, lowercase, symbols and numbers</li>
+                    </ul>
+
+                    <input type="submit" value="Submit">
+
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
