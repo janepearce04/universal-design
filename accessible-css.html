@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessible CSS Layout</title>
+
+    <link rel="stylesheet" href="css\css-accessible.css">
+</head>
+<body>
+    <div class="container"> 
+        <header>
+            <h1>Accessible CSS Layout</h1>
+        </header>
+
+        <nav><strong style="font-weight: 900;">Other Links:</strong>
+            <ul>
+                <li id="link-1"><a href="#">link1</a></li>
+                <li id="link-2"><a href="#">link2</a></li>
+                <li id="link-3"><a href="#">link3</a></li>
+                <li id="link-4"><a href="#">link4</a></li>
+            </ul>
+        </nav>
+
+        <aside id="aside1">
+            <h2>Hey so</h2>
+            <p>i don't actually know what i'm doing</p>
+            <aside>
+                <h3>More information</h3>
+                <p>further research may indicate that AHJHHHHHHAHAHGHAGGAHA</p>
+            </aside>
+        </aside>
+
+        <main>
+            <section>
+                <h2>
+                    Primary content
+                </h2>
+                <p>I don't actually know, I just work here or something.</p>
+                <h2>
+                    more content?
+                </h2>
+                <p>Hey this is exactly what it looks like, more content. I think.</p>
+            </section>
+        </main>
+
+        <aside id="aside2">
+            <form id="personal-info">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name-input">Name:</label>
+                    <input type="text" id="name-input" name="name-input" required><br>
+                    <label for="email-input">Email:</label>
+                    <input type="email" id="email-input" name="email-input" required><br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+            <p>Thank you for being a part of our team! (you don't have a choice)
+            </p>
+            <img src="images/arrested-for-gay.jpg" style="width: 200px;">
+        </aside>
+
+        <footer>
+            Credit: Someone Idk
+            <aside>
+                <h3>Jalapenos are like the best pepper</h3>
+            </aside>
+        </footer>
+    </div>
+</body>
+</html>
